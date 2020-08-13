@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WebDev workshop</title>
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('html-css-js', this, 'powderblue')" id="defaultOpen">HTML/CSS/JS</button>
+        <button class="tablink" onclick="openPage('javascript', this, 'palegoldenrod')">JavaScript</button>
+        <div id="html-css-js" class="tabcontent">
+            <p>Examples of various HTML controls supported by CSS magic and JavaScript logic</p>
+            <br/>
+            <div class="grid">
+                <div>
+                    <a href="/views/html_demo.html">HTML demo</a><br>
+                    <a href="/views/css_demo.html">CSS demo</a><br>
+                    <a href="/views/form_demo.html">form demo</a><br>
+                </div>
+            </div>
+        </div>
+        <div id="javascript" class="tabcontent">
+            <p>No UI, just pure JavaScript with on-screen log output</p>
+            <br/>
+            <div class="grid">
+                <div>
+                    <a href="/views/array_demo.html">Arrays</a><br>
+                    <a href="/views/async_demo.html">JS async</a><br>
+                    <a href="/views/class_demo.html">Class demo</a><br>
+                    <a href="/views/closures_demo.html">JS closures</a><br>
+                    <a href="/views/exceptions_demo.html">Errors</a><br>
+                    <a href="/views/exponential_backoff.html">Exponential backoff</a><br>
+                    <a href="/views/expressions_demo.html">Expressions</a><br>
+                    <a href="/views/fetch_demo.html">fetch API</a><br>
+                    <a href="/views/functions_demo.html">Functions</a><br>
+                    <a href="/views/global_functions_demo.html">Global functions</a><br>
+                    <a href="/views/memory_management_demo.html">Memory management</a><br>
+                    <a href="/views/objects_demo.html">Objects</a><br>
+                    <a href="/views/operators_demo.html">Operators</a><br>
+                    <a href="/views/promise_demo.html">JS promise</a><br>
+                    <a href="/views/statements_and_declarations_demo.html">Statements &amp; declarations</a><br>
+                    <a href="/views/string_demo.html">Strings</a><br>
+                    <a href="/views/this_demo.html">this</a><br>
+                    <a href="/views/window_demo.html">Window demo</a><br>
+                </div>
+            </div>
+        </div>
+        <script src='/scripts/main.js'></script>
+    </body>
+</html>

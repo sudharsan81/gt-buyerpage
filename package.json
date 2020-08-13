@@ -1,0 +1,18 @@
+{
+  "name": "gumtree-frontend",
+  "version": "1.0.0",
+  "description": "Init npm install @google-cloud/functions-framework",
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/functions": "^1.0.1",
+    "@google-cloud/functions-framework": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "functions-framework --target=gumtreeBuyerPage",
+    "deploy": "gcloud functions deploy \"gumtreeBuyerPage\" --trigger-http --runtime=\"nodejs10\" --memory=1024mb"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
