@@ -53,15 +53,16 @@ async function lsWithGrep() {
       if(status === 'ACTIVE') {
           console.log('\n-> Starting tests.......🤞\n\n');
           const testcases = [
-              'CHECK_TRADEMARK',
-              'CHECK_CAROUSEL'
+              'CHECK_ADTITLE',
+              'MESSAGING_ENABLED'
             ];
             testcases.forEach(async (test) => {
-                let invokeTest = `gcloud functions call gumtreeBuyerPageTest --data='{"url": "${url}", "iteration":"${newFn}", "testid":"CHECK_TRADEMARK"}'`;
+                let invokeTest = `gcloud functions call gumtreeBuyerPageTest --data='{"url": "${url}", "tag":"${newFn}", "testid":"${test}"}'`;
                 const { stdout, stderr } = await exec(invokeTest);
-                console.log('stdout:', stdout);
-                console.log('stderr:', stderr);
+                console.log('stdout:', stdout.trim());
+                console.log('stderr:', stderr.trim());
                 await sleep(1200);
+                console.log('\n');
             });
 
       }
