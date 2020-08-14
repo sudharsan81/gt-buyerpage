@@ -60,6 +60,8 @@ async function lsWithGrep() {
             'Checking the buttons in Message centre',
             'Checking the Auto text in Message centre',
             'Checking the Favourite butto',
+            'Checking the Report button',
+            'Checking the Get A Quote Button'
             ];
             testcases.forEach(async (test) => {
                 let invokeTest = `gcloud functions call gumtreeBuyerPageTest --data='{"url": "${url}", "tag":"${newFn}", "scenario":"${test}"}'`;
