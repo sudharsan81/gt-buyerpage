@@ -48,16 +48,21 @@ async function lsWithGrep() {
       });
 
       console.log(`\n-> Deployment is successful. 👌`);
-      console.log(`\n-> New Service can be accessed form : ${url}`);
+      console.log('\n-> Gumtree Buyer web application is up and running.');
+      console.log(`\n-> Gumtree Buyer url : ${url}`);
 
       if(status === 'ACTIVE') {
           console.log('\n-> Starting tests.......🤞\n\n');
           const testcases = [
-              'CHECK_ADTITLE',
-              'MESSAGING_ENABLED'
+            'Checking the title',
+            'Checking the Post Ad Button',
+            'Checking the Login/Register Button',
+            'Checking the buttons in Message centre',
+            'Checking the Auto text in Message centre',
+            'Checking the Favourite butto',
             ];
             testcases.forEach(async (test) => {
-                let invokeTest = `gcloud functions call gumtreeBuyerPageTest --data='{"url": "${url}", "tag":"${newFn}", "testid":"${test}"}'`;
+                let invokeTest = `gcloud functions call gumtreeBuyerPageTest --data='{"url": "${url}", "tag":"${newFn}", "scenario":"${test}"}'`;
                 const { stdout, stderr } = await exec(invokeTest);
                 console.log('stdout:', stdout.trim());
                 console.log('stderr:', stderr.trim());
