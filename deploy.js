@@ -67,7 +67,6 @@ async function lsWithGrep() {
                 console.log('stdout:', stdout.trim());
                 console.log('stderr:', stderr.trim());
                 await sleep(1200);
-                console.log('\n');
             });
 
       }
